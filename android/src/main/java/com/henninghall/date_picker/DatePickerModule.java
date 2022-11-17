@@ -48,7 +48,7 @@ public class DatePickerModule extends ReactContextBaseJavaModule {
         final String cancelText = props.getString("cancelText");
         final View pickerWithMargin = withTopMargin(picker);
 
-        return new AlertDialog.Builder(DatePickerPackage.context.getCurrentActivity())
+        return new AlertDialog.Builder(DatePickerPackage.context.getCurrentActivity(), android.R.style.Theme_Material_Light_Dialog_Alert)
                 .setTitle(title)
                 .setCancelable(true)
                 .setView(pickerWithMargin)
